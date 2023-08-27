@@ -1,0 +1,157 @@
+//functions
+
+
+// import java.util.Scanner;
+// public class Main{
+   
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         System.out.println("enter the values of a and b");
+//         int a= input.nextInt();
+//         int b=input.nextInt();
+//         int ans = sum(a,b);
+//         System.out.println("sum of two numbers = "+ ans);
+        
+//     }
+
+// access modifier return_type function_name(){}
+//code
+//
+
+
+//      static int sum(int a,int b){
+//         int ans = a+b;
+//         return ans;
+        
+//     }
+// }
+
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args)
+//     {
+//         Scanner input = new Scanner(System.in);
+//         int n= input.nextInt();
+//         int ans =fibonacci(n);
+//         System.out.println(ans);
+        
+//     }
+//     static int fibonacci(int n){
+//         //base condition
+//         if(n==0 || n==1)
+//         {
+//             if(n==0)
+//             {
+//                 return 0;
+//             }
+//             else if(n==1)
+//             {
+//                 return 1;
+//             }
+//         }
+//         //recursive relation
+//         int ans = fibonacci(n-1) + fibonacci(n-2);
+//         System.out.println(ans);
+       
+//         return ans;
+        
+        
+//     }
+// }
+
+//display greeting
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args){
+//         greet();
+//     }
+//     static void greet(){
+//         System.out.println("HELLO HELLO HELLO!");
+//     }
+// }
+
+//swap function
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         int a = input.nextInt();
+//         int b = input.nextInt();
+//         swap(a,b);
+        
+//     }
+//     static void swap(int a, int b){
+       
+//         int temp=a;
+//         a=b;
+//         b=temp;
+//         System.out.println("swapped numbers are "+a+b);
+        
+//     }
+// }
+//check prime or not
+// import java.util.Scanner;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         int n= input.nextInt();
+//         boolean ans =  checkPrime(n);
+//         if(ans == true){
+        
+//             System.out.println("the input is prime");
+//         }
+//         else
+//         System.out.println("input is not prime");
+        
+//     }
+//     static boolean checkPrime(int n){
+        
+//         for(int i=2;i<n;i++)
+//         {
+//             if(n%i==0)
+//             {
+//                 return false;
+//             }
+            
+            
+//         }
+//         return true;
+        
+//     }
+// }
+//armstrong number
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        
+        int ans=checkArmstrong(n);
+        if(ans==n)
+        {
+            System.out.println("the input number is armstrong ");
+        }
+        
+        else
+        System.out.println("input is not armstrong");
+    }
+    static int checkArmstrong(int n){
+        int ans = 0;
+        int temp;
+        while(n!=0){
+            temp = n%10;
+            
+            ans = ans+cube(temp);
+            n= n/10;
+            
+        }
+        return ans;
+        }
+       
+        
+    
+    static int cube(int temp){
+        int ans = temp * temp * temp;
+        return ans;
+    }
+}
