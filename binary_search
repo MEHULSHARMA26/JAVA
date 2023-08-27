@@ -1,0 +1,40 @@
+//binary search
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int[] arr = {2,4,6,9,11,12,14,17,20,36,40};
+        int target = 16;
+        if(checkTarget(arr, target) == true){
+            System.out.print("element exists");
+        }
+        else
+        System.out.print("element does not exist");
+        
+    }
+    static boolean checkTarget(int[] arr, int target){
+        int start =0;
+        int end = arr.length - 1;
+        int middle =start + (end-start)/2;
+        while(start<=end){
+            if(arr[middle] == target)
+            {
+                return true;
+            }
+            else if(arr[middle] > target)
+            {
+                end=middle -1;
+            }
+            else if(arr[middle]<target)
+            {
+                start = middle+1;
+            }
+            middle= start + (end-start)/2;
+        }
+        return false;
+    }
+}
+/*
+binary search is applicable only on sorted array
+step 1 -> find middle element 
+step2 -> check if it is equal to target element or not
+step3 -> proceed accordingly*/
