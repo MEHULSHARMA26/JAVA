@@ -1,0 +1,125 @@
+// //searching
+// import java.io.*;
+// import java.util.Scanner;
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		Scanner input = new Scanner(System.in);
+// 		int[] arr= {18,12,9,14,77,50};
+// 		int target = 14;
+// 	    for(int i=0;i<6;i++){
+// 	        if(arr[i]==target){
+// 	            System.out.println("target element is present in aray and is present on index:"+i);
+// 	        }
+	        
+// 	    }
+// 	}
+// }
+// import java.io.*;
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter the value of size of array:");
+//         int n= input.nextInt();
+//         int[] arr= new int[n];
+//         System.out.print("enter the values of elements of array");
+//         for(int i=0;i<arr.length;i++){
+//             arr[i] = input.nextInt();
+//         }
+//         System.out.print("enter the value of target ");
+//         int target = input.nextInt();
+//         boolean ans = linearSearch(arr,target);
+//         if(ans == true ){
+//             System.out.print("element is present");
+//         }
+//         else
+//         System.out.print("element is not present");
+//     }
+//     static boolean linearSearch(int[] arr, int target){
+//         for(int i=0;i<arr.length;i++){
+//             if(arr[i]==target){
+//                 return true;
+//             }
+            
+//         }
+//         return false;
+        
+//     }
+//}
+
+//Q1 --> search in string
+// import java.util.*;
+// import java.io.*;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         String name = "maximal";
+//         char target ='x';
+//          System.out.print(searchInString(name,target));
+//     }
+//     static boolean searchInString(String str,char target){
+//         if(str.length() == 0){
+//             return false;
+//         }
+//         for(int i=0;i<str.length();i++){
+//             if(target == str.charAt(i) ){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+// }
+
+//q2 search in range
+// import java.util.*;
+// import java.util.Scanner;
+// import java.io.*;
+// public class Main{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         int[] arr = {18,12,-5,3,24,28};
+//         int target=3;
+//         int start_index=input.nextInt();
+//         int finish_index= input.nextInt();
+//         System.out.print(searchInArray(arr,target,start_index,finish_index));        
+//     }
+//     static boolean searchInArray(int[] arr, int target,int start_index,int finish_index){
+//         if(start_index >=0 && finish_index<arr.length){
+//             for(int i = start_index;i<= finish_index;i++){
+//                 if(arr[i] == target){
+//                     return true;
+//                 }
+//             }
+//             return false;
+//         }
+//         return false;
+        
+//     }
+// }
+
+//searching in 2d array
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int[][] arr  = {{23,4,2},
+                        {18,12,3,7,8}
+                        {78,92,43,37,28}
+                        {8,62,53,77,80}
+                        };
+    
+    int target = 53;
+    }
+    static boolean checkInArray(int[][] arr,int target){
+        for(int row=0;row<arr.length;i++){
+            for(int col=0;col<arr[row].length;col++){
+                if(arr[i][j]==target){
+                    return true;
+                }
+            }
+        }
+    }
+}
